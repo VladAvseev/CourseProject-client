@@ -133,7 +133,6 @@ public class TicketAddPanel extends JPanel {
                 doctorIdText.setText("");
                 patientIdText.setText("");
                 diagnosisText.setText("");
-
                 patientIdError.setText("");
             }
         }

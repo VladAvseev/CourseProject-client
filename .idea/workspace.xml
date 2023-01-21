@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32ed13e-a379-4056-9845-46e022a81fbf" name="Changes" comment="commit">
+    <list default="true" id="a32ed13e-a379-4056-9845-46e022a81fbf" name="Changes" comment="remove postgres dependency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltech/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltech/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltech/client/api/PatientRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltech/client/api/PatientRouter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltech/client/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltech/client/model/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltech/client/panels/patient/PatientAddPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltech/client/panels/patient/PatientAddPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltech/client/panels/patient/PatientUpdatePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltech/client/panels/patient/PatientUpdatePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltech/client/panels/ticket/TicketAddPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltech/client/panels/ticket/TicketAddPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltech/client/request/PatientCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltech/client/request/PatientCreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltech/client/request/PatientUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltech/client/request/PatientUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/eltech/client/tableModels/PatientTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/eltech/client/tableModels/PatientTableModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,25 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java/CourseProjectClient&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "D:/Java/CourseProjectClient",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Java\CourseProject\src\main\java\ru\eltech\client" />
@@ -116,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673973894370</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remove postgres dependency">
+      <created>1674043296443</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674043296443</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +155,8 @@
     <MESSAGE value="commit" />
     <MESSAGE value="final" />
     <MESSAGE value="fix add ticket panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix add ticket panel" />
+    <MESSAGE value="remove postgres dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove postgres dependency" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

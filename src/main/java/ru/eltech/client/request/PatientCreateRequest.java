@@ -3,13 +3,15 @@ package ru.eltech.client.request;
 public class PatientCreateRequest {
     private String name;
     private String phone;
+    private String email;
 
     public PatientCreateRequest() {
     }
 
-    public PatientCreateRequest(String name, String phone) {
+    public PatientCreateRequest(String name, String phone, String email) {
         this.name = name;
         this.phone = phone;
+        this.email = email;
     }
 
     public String getName() {
@@ -27,4 +29,8 @@ public class PatientCreateRequest {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
 }

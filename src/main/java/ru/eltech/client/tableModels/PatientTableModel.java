@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PatientTableModel extends AbstractTableModel {
-    private final int columnCount = 3;
+    private final int columnCount = 4;
     private List<String[]> patientsRecords = new ArrayList<>();
     private final PatientRouter router;
 
@@ -37,6 +37,7 @@ public class PatientTableModel extends AbstractTableModel {
             case 0 -> {return "id";}
             case 1 -> {return "name";}
             case 2 -> {return "phone";}
+            case 3 -> {return "email";}
         }
 
         return "";
@@ -64,6 +65,7 @@ public class PatientTableModel extends AbstractTableModel {
 
         record[1] = patient.getName();
         record[2] = patient.getPhone();
+        record[3] = patient.getEmail();
     }
 
     public void deleteRecord(int id) {

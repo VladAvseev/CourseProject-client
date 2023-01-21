@@ -82,6 +82,7 @@ public class PatientRouter {
         Map<String,Object> params = new LinkedHashMap<>();
         params.put("name", request.getName());
         params.put("phone", request.getPhone());
+        params.put("email", request.getEmail());
 
         //add params to request
         StringBuilder postData = new StringBuilder();
@@ -129,6 +130,7 @@ public class PatientRouter {
         Map<String,Object> params = new LinkedHashMap<>();
         params.put("name", request.getName());
         params.put("phone", request.getPhone());
+        params.put("email", request.getEmail());
 
         //add params to request
         StringBuilder postData = new StringBuilder();

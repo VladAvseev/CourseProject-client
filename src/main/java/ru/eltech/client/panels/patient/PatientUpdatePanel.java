@@ -26,9 +26,12 @@ public class PatientUpdatePanel extends JPanel {
         JLabel phoneLabel = new JLabel("Введите номер телефона");
         JTextField phoneText = new JTextField(20);
         JLabel phoneError = new JLabel("");
+        JLabel emailLabel = new JLabel("Введите почту");
+        JTextField emailText = new JTextField(20);
+        JLabel emailError = new JLabel("");
 
         JButton edit = new JButton("Изменить");
-        edit.addActionListener(new PatientUpdateListener(router, patientTablePanel, idText, nameText, phoneText, idError, nameError, phoneError));
+        edit.addActionListener(new PatientUpdateListener(router, patientTablePanel, idText, nameText, phoneText, emailText, idError, nameError, phoneError, emailError));
 
         setLayout(new GridBagLayout());
 
@@ -44,7 +47,11 @@ public class PatientUpdatePanel extends JPanel {
         add(phoneText, new CustomGridBagConstraint(1, 4, 1, 1));
         add(phoneError, new CustomGridBagConstraint(0, 5, 2, 1));
 
-        add(edit, new CustomGridBagConstraint(0, 6, 2, 1));
+        add(emailLabel, new CustomGridBagConstraint(0, 6, 1, 1));
+        add(emailText, new CustomGridBagConstraint(1, 6, 1, 1));
+        add(emailError, new CustomGridBagConstraint(0, 7, 2, 1));
+
+        add(edit, new CustomGridBagConstraint(0, 8, 2, 1));
     }
 
     private record PatientUpdateListener(PatientRouter router,
@@ -52,9 +59,11 @@ public class PatientUpdatePanel extends JPanel {
                                         JTextField idText,
                                         JTextField nameText,
                                         JTextField phoneText,
+                                        JTextField emailText,
                                          JLabel idError,
                                          JLabel nameError,
-                                         JLabel phoneError)
+                                         JLabel phoneError,
+                                         JLabel emailError)
             implements ActionListener {
 
         @Override
@@ -68,6 +77,7 @@ public class PatientUpdatePanel extends JPanel {
             }
             String name = nameText.getText().trim();
             String phone = phoneText.getText().trim();
+            String email = emailText.getText().trim();
 
             if(!patientTable.getPtModel().findRecordByColumn(Integer.toString(id), 0)) {
                 idError.setText("Пациент с таким id не найден");
@@ -81,6 +91,13 @@ public class PatientUpdatePanel extends JPanel {
                 return;
             } else {
                 nameError.setText("");
+            }
+
+            if (email.isEmpty() || email.length() > 50) {
+                emailError.setText("Длина почты должна быть от 1 до 50 символов");
+                return;
+            } else {
+                emailError.setText("");
             }
 
             if (!ValidationService.checkPhone(phone)) {
@@ -100,6 +117,7 @@ public class PatientUpdatePanel extends JPanel {
             request.setId(id);
             request.setName(name);
             request.setPhone(phone);
+            request.setEmail(email);
 
             try {
                 patientTable.getPtModel().updateRecord(router.updatePatient(request));
@@ -112,6 +130,7 @@ public class PatientUpdatePanel extends JPanel {
                 idText.setText("");
                 nameText.setText("");
                 phoneText.setText("");
+                emailText.setText("");
             }
         }
     }

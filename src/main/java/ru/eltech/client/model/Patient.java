@@ -5,12 +5,15 @@ public class Patient {
     private String name;
     private String phone;
 
+    private String email;
+
     private boolean is_archived;
 
-    public Patient(int id, String name, String phone) {
+    public Patient(int id, String name, String phone, String email) {
         this.id = id;
         this.name = name;
         this.phone = phone;
+        this.email = email;
     }
 
     public Patient() {}
@@ -39,12 +42,16 @@ public class Patient {
         this.phone = phone;
     }
 
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
+
     public boolean isIs_archived() { return is_archived; }
 
     public void setIs_archived(boolean is_archived) { this.is_archived = is_archived; }
 
     @Override
     public String toString() {
-        return id + "," + name + ",+" + phone;
+        return id + "," + name + ",+" + phone + "," + email;
     }
 }

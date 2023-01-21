@@ -6,8 +6,8 @@ public class PatientUpdateRequest extends PatientCreateRequest{
     public PatientUpdateRequest() {
     }
 
-    public PatientUpdateRequest(int id, String name, String phone) {
-        super(name, phone);
+    public PatientUpdateRequest(int id, String name, String phone, String email) {
+        super(name, phone, email);
         this.id = id;
     }
 
